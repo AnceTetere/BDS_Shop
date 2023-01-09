@@ -1,9 +1,9 @@
 package products;
 
 public class Car {
-    private String make = "Tesla";
-    private String model = "Model X";
-    private String colour = "Grey";
+    private String make = "Honda";
+    private String model = "Accord";
+    private String colour = "Blue";
     private int doors = 2;
     private boolean convertible = true;
 
