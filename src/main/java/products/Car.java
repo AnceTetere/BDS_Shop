@@ -27,6 +27,37 @@ public class Car {
         return convertible;
     }
 
+    public void setMake(String make) {
+
+        if (make == null) make = "Unknown";
+        String lowerCaseMake = make.toLowerCase();
+        switch (lowerCaseMake) {
+            case "holden":
+            case "porsche":
+            case "tesla":
+                this.make = make;
+                break;
+            default:
+                this.make = "Unsupported ";
+        }
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public void setColour(String colour) {
+        this.colour = colour;
+    }
+
+    public void setDoors(int doors) {
+        this.doors = doors;
+    }
+
+    public void setConvertible(boolean convertible) {
+        this.convertible = convertible;
+    }
+
     public void describeCar() {
         System.out.println(doors + "-Door " +
                 colour + " " +
