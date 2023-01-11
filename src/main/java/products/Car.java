@@ -28,7 +28,6 @@ public class Car {
     }
 
     public void setMake(String make) {
-
         if (make == null) make = "Unknown";
         String lowerCaseMake = make.toLowerCase();
         switch (lowerCaseMake) {
@@ -38,8 +37,9 @@ public class Car {
                 this.make = make;
                 break;
             default:
-                this.make = "Unsupported ";
+                this.make = "Unsupported";
         }
+
     }
 
     public void setModel(String model) {
