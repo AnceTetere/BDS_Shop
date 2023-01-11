@@ -1,27 +1,41 @@
 package functionality;
 
 public class CustomerAccount {
-
-    private String accountNumber;
-    private double accountBalance;
+    private String number;
+    private double balance;
     private String customerName;
-    private String customerEmail;
+    private String getCustomerEmail;
     private String customerPhone;
 
-    public String getAccountNumber() {
-        return accountNumber;
+    public void depositFunds(double depositAmount) {
+        balance += depositAmount;
+        System.out.println("Deposit of EUR " + depositAmount + " made. New balance is EUR " + balance + ".");
     }
 
-    public void setAccountNumber(String accountNumber) {
-        this.accountNumber = accountNumber;
+    public void withdrawFunds(double withdrawAmount) {
+        if (balance - withdrawAmount < 0) {
+            System.out.println("Insufficient funds. You only have EUR " + balance + " in your account.");
+        } else {
+            balance -= withdrawAmount;
+            System.out.println("Withdrawal of EUR " + withdrawAmount + " processed. Remaining balance equals EUR "
+                    + balance + ".");
+        }
     }
 
-    public double getAccountBalance() {
-        return accountBalance;
+    public String getNumber() {
+        return number;
     }
 
-    public void setAccountBalance(double accountBalance) {
-        this.accountBalance = accountBalance;
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
     }
 
     public String getCustomerName() {
@@ -32,12 +46,12 @@ public class CustomerAccount {
         this.customerName = customerName;
     }
 
-    public String getCustomerEmail() {
-        return customerEmail;
+    public String getGetCustomerEmail() {
+        return getCustomerEmail;
     }
 
-    public void setCustomerEmail(String customerEmail) {
-        this.customerEmail = customerEmail;
+    public void setGetCustomerEmail(String getCustomerEmail) {
+        this.getCustomerEmail = getCustomerEmail;
     }
 
     public String getCustomerPhone() {
@@ -46,19 +60,5 @@ public class CustomerAccount {
 
     public void setCustomerPhone(String customerPhone) {
         this.customerPhone = customerPhone;
-    }
-
-    public void depositFunds(double depositAmount) {
-        accountBalance += depositAmount;
-        System.out.println("Deposit of EUR " + depositAmount + " made. New balance is " + accountBalance);
-    }
-
-    public void withdrawFunds(double withdrawalAmount) {
-        if (accountBalance - withdrawalAmount < 0) {
-            System.out.println("Insufficient funds. You only have EUR " + accountBalance + " in your account.");
-        } else {
-            accountBalance -= withdrawalAmount;
-            System.out.println("Withdrawal of EUR " + withdrawalAmount + " processed. Remaining balance equals EUR " + accountBalance + ".");
-        }
     }
 }
