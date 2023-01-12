@@ -4,8 +4,21 @@ public class CustomerAccount {
     private String number;
     private double balance;
     private String customerName;
-    private String getCustomerEmail;
+    private String customerEmail;
     private String customerPhone;
+
+    public CustomerAccount() {
+        System.out.println("Empty constructor called");
+    }
+
+    public CustomerAccount(String number, double balance, String customerName, String email, String phone) {
+        System.out.println("The customer account constructor with parameters called.");
+        this.number = number;
+        this.balance = balance;
+        this.customerName = customerName;
+        customerEmail = email;
+        customerPhone = phone;
+    }
 
     public void depositFunds(double depositAmount) {
         balance += depositAmount;
@@ -47,11 +60,11 @@ public class CustomerAccount {
     }
 
     public String getGetCustomerEmail() {
-        return getCustomerEmail;
+        return customerEmail;
     }
 
-    public void setGetCustomerEmail(String getCustomerEmail) {
-        this.getCustomerEmail = getCustomerEmail;
+    public void setGetCustomerEmail(String customerEmail) {
+        this.customerEmail = customerEmail;
     }
 
     public String getCustomerPhone() {
