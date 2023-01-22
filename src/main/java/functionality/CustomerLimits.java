@@ -12,8 +12,6 @@ public class CustomerLimits {
 
     public CustomerLimits(String name, String email) {
         this(name, 1000, email);
-        this.name = name;
-        this.emailAddress = email;
     }
 
     public CustomerLimits(String name, double creditLimit, String emailAddress) {
